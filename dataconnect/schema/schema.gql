@@ -1,0 +1,31 @@
+type User @table {
+  displayName: String!
+  createdAt: Timestamp!
+  email: String
+  photoUrl: String
+  isAdmin: Boolean
+}
+
+type Category @table {
+  name: String!
+  description: String
+}
+
+type Issue @table {
+  description: String!
+  latitude: Float!
+  longitude: Float!
+  status: String!
+  createdAt: Timestamp!
+  photoUrl: String
+  submittedBy: User
+  category: Category
+}
+
+type StatusUpdate @table {
+  newStatus: String!
+  createdAt: Timestamp!
+  notes: String
+  issue: Issue
+  updatedBy: User
+}

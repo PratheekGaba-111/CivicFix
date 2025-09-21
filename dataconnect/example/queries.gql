@@ -1,0 +1,59 @@
+mutation AddNewIssue @auth(level: USER) {
+  issue_insert(
+    data: {
+      description: "New issue description"
+      latitude: 37.7749
+      longitude: -122.4194
+      status: "open"
+      categoryId: "a1b2c3d4-e5f6-7890-1234-567890abcdef" # Example UUID
+      submittedById_expr: "auth.uid"
+      createdAt_expr: "request.time"
+    }
+  )
+}
+
+query GetOpenIssues @auth(level: PUBLIC) {
+  issues(where: {status: {eq: "open"}}) {
+    id
+    description
+    latitude
+    longitude
+    status
+    category {
+      id
+      name
+    }
+    submittedBy {
+      id
+      displayName
+    }
+    createdAt
+  }
+}
+
+mutation UpdateIssueStatus($issueId: UUID!, $newStatus: String!, $notes: String) @auth(level: USER) {
+  statusUpdate_insert(
+    data: {
+      issueId: $issueId
+      newStatus: $newStatus
+      notes: $notes
+      updatedById_expr: "auth.uid"
+      createdAt_expr: "request.time"
+    }
+  )
+}
+
+query GetMyIssues @auth(level: USER) {
+  issues(where: {submittedById_expr: {eq_expr: "auth.uid"}}) {
+    id
+    description
+    latitude
+    longitude
+    status
+    category {
+      id
+      name
+    }
+    createdAt
+  }
+}

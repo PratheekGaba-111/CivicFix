@@ -1,0 +1,136 @@
+/* ===== Page Background ===== */
+.new-report-page {
+  min-height: 100vh;
+  background: linear-gradient(145deg, #e0f7fa, #a7ffeb, #f9fbe7);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== Header (same as homepage logo style) ===== */
+.page-header {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.homepage-logo {
+  font-size: 2.8rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #0288d1, #4fc3a1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.homepage-user {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== Page Title ===== */
+.report-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #0288d1;
+}
+
+/* ===== Form Card ===== */
+.report-form-card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ===== Form Groups ===== */
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.form-group textarea,
+.form-group select,
+.form-group input[type="text"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* ===== Image Preview ===== */
+.report-preview-image {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* ===== Map Picker ===== */
+.map-container {
+  width: 100%;
+  height: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: crosshair;
+}
+
+.location-text {
+  font-size: 13px;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* ===== Submit Button ===== */
+.report-submit-button {
+  background-color: #28a745;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.report-submit-button:hover {
+  background-color: #218838;
+  transform: scale(1.02);
+}
+
+/* ===== Success Text ===== */
+.success-text {
+  color: green;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.clickable-logo {
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.clickable-logo:hover {
+  transform: scale(1.05);
+  color: #0288d1; /* optional hover color */
+}
+
+.clickable-logo:active {
+  transform: scale(0.95);
+}

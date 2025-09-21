@@ -1,0 +1,121 @@
+/* Smooth hover and transitions for buttons and links */
+button, a {
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover, a:hover {
+  transform: scale(1.05);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 255, 0.6);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(200, 200, 200, 0.2);
+}
+
+/* Page background with gradient */
+.page-bg {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #f3e7e9, #e3eeff);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Header styling */
+.app-header {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #7f00ff, #e100ff);
+  color: white;
+  padding: 16px 32px;
+  border-radius: 32px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  margin-bottom: 24px;
+}
+
+/* Map container (square) */
+.map-container {
+  width: 100%;
+  max-width: 400px; /* square size */
+  height: 400px; /* fixed square height */
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+@media (min-width: 768px) {
+  .map-container {
+    max-width: 450px;
+    height: 450px;
+  }
+}
+
+
+/* Floating Action Buttons */
+.fab-button {
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  outline: none;
+  margin-right: 12px;
+}
+
+.fab-button.blue {
+  background-color: #2196f3;
+}
+
+.fab-button.red {
+  background-color: #f44336;
+}
+
+.fab-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+/* Report card styling */
+.report-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  padding: 16px;
+  margin-bottom: 16px;
+  width: 320px;
+  max-width: 384px;
+}
+
+/* Animated gradient background (optional) */
+.animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+  background-size: 800% 800%;
+  animation: gradientMove 20s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

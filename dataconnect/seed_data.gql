@@ -1,0 +1,9 @@
+mutation SeedData @auth(level: USER) {
+  category_insertMany(data: [
+    { name: "Roads" description: "Potholes, cracks, and other road issues" }
+    { name: "Sidewalks" description: "Cracked, uneven, or obstructed sidewalks" }
+    { name: "Street Lights" description: "Damaged or non-functional street lights" }
+    { name: "Traffic Signals" description: "Malfunctioning traffic signals" }
+    { name: "Parks" description: "Issues with park maintenance or facilities" }
+  ])
+}
