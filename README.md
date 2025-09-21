@@ -44,8 +44,8 @@ npm start
 ## Usage
 
 1. Register or log in as a user.  
-2. Submit a civic issue with location and image link.  
-3. Admin can view all reports and track them in real time.
+2. Submit a civic issue with location and image link.
+3. The submission is saved in the MySQL Database
 
 ## License
 
